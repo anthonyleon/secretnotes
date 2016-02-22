@@ -3,11 +3,11 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def created
+  def create
     @user = User.new user_params
 
     return render action: 'new' unless @user.save
-    
+
     redirect_to root_path, notice: 'Created user'
   end
 
