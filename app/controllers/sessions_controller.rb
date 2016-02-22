@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     return render action: 'new' unless @user
 
     #logged in, hooray
-    session[:user_id] = @user.# IDEA:
+    session[:user_id] = @user.id
     redirect_to notes_path
   end
 end
